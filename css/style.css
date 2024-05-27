@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  text-align: center;
+}
+
+#grid-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container {
+  flex: 0 0 6.25%;
+  height: 6.25vh;
+  width: 6.25vw;
+}
+
+.container:nth-child(even) {
+  background-color: black;
+}
+
+.container:nth-child(odd) {
+  background-color: red;
+}
