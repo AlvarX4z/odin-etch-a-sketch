@@ -22,11 +22,3 @@ body {
   height: 6.25vh;
   width: 6.25vw;
 }
-
-.container:nth-child(even) {
-  background-color: black;
-}
-
-.container:nth-child(odd) {
-  background-color: red;
-}
