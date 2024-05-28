@@ -20,10 +20,14 @@ function createGrid(gridSize) {
     container.style.flexBasis = `${containerWidthSize.toString()}%`;
     container.style.width = `${containerWidthSize}vw`;
     container.style.height = `${containerHeigthSize}vh`;
-    
+
     container.addEventListener(
       "mouseover",
-      () => (container.style.backgroundColor = "black")
+      () =>
+        (container.style.backgroundColor = `rgb(
+          ${Math.floor(Math.random() * 256)}, 
+          ${Math.floor(Math.random() * 256)}, 
+          ${Math.floor(Math.random() * 256)}`)
     );
     gridContainer.appendChild(container);
   }
