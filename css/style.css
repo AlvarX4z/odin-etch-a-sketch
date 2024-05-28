@@ -10,15 +10,15 @@ body {
   text-align: center;
 }
 
+button {
+  height: 10vh;
+  width: 20vw;
+}
+
 #grid-container {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
+  height: 90vh;
   justify-content: center;
-}
-
-.container {
-  flex: 0 0 6.25%;
-  height: 6.25vh;
-  width: 6.25vw;
 }
