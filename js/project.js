@@ -1,16 +1,26 @@
 const DEFAULT_SIZE = 16;
 
-function createGrid(squaredSize) {
+function createGrid(gridSize) {
   if (document.getElementById("grid-container") != null) {
     document.getElementById("grid-container").remove();
   }
+
   const gridContainer = document.createElement("div");
   gridContainer.setAttribute("id", "grid-container");
   body.appendChild(gridContainer);
 
-  for (let i = 0; i < squaredSize * squaredSize; i++) {
+  for (let i = 0; i < gridSize * gridSize; i++) {
     let container = document.createElement("div");
     container.setAttribute("class", "container");
+
+    const containerWidthSize = 100.0 / gridSize;
+    const containerHeigthSize = 90.0 / gridSize;
+    container.style.flexGrow = "0";
+    container.style.flexShrink = "0";
+    container.style.flexBasis = `${containerWidthSize.toString()}%`;
+    container.style.width = `${containerWidthSize}vw`;
+    container.style.height = `${containerHeigthSize}vh`;
+    
     container.addEventListener(
       "mouseover",
       () => (container.style.backgroundColor = "black")
@@ -31,7 +41,7 @@ button.addEventListener("click", function () {
     createGrid(gridSize);
   } else {
     console.log(
-      `Invalid selected size. Creating a default grid size of ${DEFAULT_SIZE.toString} * ${DEFAULT_SIZE.toString}.`
+      `Invalid selected size. Creating a default grid size of ${DEFAULT_SIZE.toString()} * ${DEFAULT_SIZE.toString()}.`
     );
     createGrid(DEFAULT_SIZE);
   }

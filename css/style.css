@@ -22,9 +22,3 @@ button {
   height: 90vh;
   justify-content: center;
 }
-
-.container {
-  flex: 0 0 6.25%;
-  height: 6.25vh;
-  width: 6.25vw;
-}
